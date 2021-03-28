@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>DIW Tarea 06</title>
+		<style type="text/css">
+			body {text-align: center;}
+			.cerrado {display:none;}
+			.resumen {width:650px; border: 1px solid black; padding:10px; margin: 5px auto; text-align: left;}
+			.resumen p {margin:0;}
+			.resumen p:first-child {font-weight:bold; margin: 5px 0;}
+			#botonAyuda {cursor:pointer;}
+		</style>
+	</head>
+	<body>
+		<p>
+			<strong>Clip de vídeo:</strong> Big Buck Bunny <br/>
+			<strong>Formato:</strong> MP4 <br/>
+			<strong>Tamaño:</strong> 9,80MB <br/>
+			<strong>Códec de vídeo:</strong> H264 <br/>
+			854x480 - 24 fps <br/>
+			<strong>Códec audio:</strong> MPEG-2 AAC, 48.000 Hz, Estéreo <br/><br/>
+
+			<!-- Lo pedido por la tarea -->
+			<object width="427" height="240">
+				<param name="src" value="Garcia_Aristu_Asier_DIW06_Video.mp4"/>
+				<param name="autoplay" value="false"/>
+				<param name="controller" value="true"/>
+				<!--[if !IE]> <-->
+					<object data="Garcia_Aristu_Asier_DIW06_Video.mp4" width="427" height="320" type="video/mp4">
+						<param name="controller" value="true"/>
+					</object>
+				<!--> <![endif]-->
+			</object>
+		</p>
+		
+		<p>
+			<input type="button" value="Resumen textual" id="botonAyuda" onclick="mostrarResumen()"/>
+		</p>
+
+		<div id="resumenTextual" class="cerrado resumen">
+			<p>Resumen Textual Alternativo</p>
+			<p>00:00 Paneo vertical de un paisaje de bosque con el título Big Buck Bunny.</p>
+			<p>00:03 Plano muy contrapicado del protagonista, Big Bunny, un enorme conejo blanco.</p>
+			<p>00:04 Plano cenital de Big Bunny mirando una mariposa</p>
+			<p>00:06 Plano general con Big Bunny de espaldas y aparecen unos roedores.</p>
+			<p>00:07 Dos roedores en plano, y aparece un tercero. Miran al conejo de lejos.</p>
+			<p>00:10 Zoom in a Big Bunny que se sorprende.</p>
+			<p>00:11 Uno de los roedores, Rocky, una ardilla marrón, amenaza la mariposa con una piedra.</p>
+			<p>00:13 Big Bunny tiene cara de no querer ver lo que pasa.</p>
+			<p>00:14 Rocky, con cara de malo, aplasta la mariposa. Un rayo cruza el plano.</p>
+			<p>00:15 Big Bunny corre al interior del bosque</p>
+			<p>00:17 Big Bunny se pinta los ojos con pinturas de guerra.</p>
+			<p>00:20 Los tres roedores corren por el interior del bosque</p>
+			<p>00:21 Big Bunny entre la espesura dispara una flecha hacia arriba y esta corta una cuerda.</p>
+			<p>00:22 Un tronco cae en dirección hacia otro de los malos, Colt, un roedor flaco, alto y rojizo.</p>
+			<p>00:23 La sombra del tronco que cae va hacia la cara de Colt.</p>
+			<p>00:24 El tronco impacta contra Colt y una avellana que este tenía en la mano rebota por el aire.</p>
+			<p>00:25 Big Bunny ordena al tercer malo, un roedor gris y regordete, que se sitúe en un sitio.</p>
+			<p>00:26 Este roedor, Tum-Tum, va hacia el sitio.</p>
+			<p>00:28 El sitio es una trampa, y Tum-Tum sale volando por los aires.</p>
+			<p>00:30 Plano cenital con mucha altura, Big Bunny busca a Rocky por el bosque.</p>
+			<p>00:31 Rocky desde una rama lo observa, pone cara de malo y salta hacia él.</p>
+			<p>00:32 Tiene una mala caída, y agarrandose a una rama evita caer sobre unas lanzas afiladas.</p>
+			<p>00:37 Trepa por la rama a la que se ha agarrado y resulta que Big Bunny la tiene en su mano.</p>
+			<p>00:39 Plano de los ojos muy abiertos de Rocky.</p>
+			<p>00:40 Rocky, que es una ardilla voladora, está agarrado con unas cuerdas como una cometa.</p>
+			<p>00:41 Un plano muy abierto muestra a Big Bunny sosteniendo la improvisada cometa.</p>
+			<p>00:42 Un pájaro en una rama grita, recibe un golpe con una avellana y cae dejando la rama vacía</p>
+			<p>00:43 Donde antes estaba el pájaro ahora aparecen los créditos.</p>
+			
+		</div>
+
+		<script type="text/javascript">
+
+			function mostrarResumen() {
+				document.getElementById("resumenTextual").classList.remove("cerrado");
+				document.getElementById("botonAyuda").setAttribute("value", "Ocultar resumen");
+				document.getElementById("botonAyuda").setAttribute("onclick", "ocultarResumen()");
+
+			}
+			function ocultarResumen(){
+				document.getElementById("resumenTextual").classList.add("cerrado");
+				document.getElementById("botonAyuda").setAttribute("value", "Resumen textual");
+				document.getElementById("botonAyuda").setAttribute("onclick", "mostrarResumen()");
+			}
+
+		</script>
+	</body>
+</html>
